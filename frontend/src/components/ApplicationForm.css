@@ -1,0 +1,56 @@
+.app-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 20px 0;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.app-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #485563;
+}
+
+.app-form input {
+    padding: 8px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 14px;
+    min-width: 180px;
+}
+
+.app-form input:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+    border-color: var(--color-accent);
+}
+
+.app-form button{
+    padding: 9px 16px;
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    height: fit-content;
+}
+
+.app-form button:hover {
+    background: #2f4763;
+}
+
+.app-form .error {
+    color: var(--status-rejected);
+    font-size: 13px;
+    width: 100%;
+    margin: 0;
+}

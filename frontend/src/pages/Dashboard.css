@@ -1,0 +1,150 @@
+.dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 64px 32px;
+  position: relative;
+}
+
+.dashboard::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: max(24px, calc(50% - 450px));
+    width: 3px;
+    height: 100vh;
+    background: var(--color-ink);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 56px 0 20px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 8px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  letter-spacing: -0.01em;
+}
+
+.dashboard-header button {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  padding: 8px 14px;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+.dashboard-header button:hover {
+  border-color: var(--color-ink);
+}
+
+.status-summary {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0 24px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  color: #4B5563;
+  flex-wrap: wrap;
+}
+
+.status-summary span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 24px;
+  margin-top: 8px;
+}
+
+.app-table th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  padding: 0 12px 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.app-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.app-table tbody tr:nth-child(even) td {
+  background: #FBFAF7;
+}
+
+.app-table tr:hover td {
+  background: #F2F0EA;
+}
+
+.company-cell {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.role-cell {
+  color: #4B5563;
+  font-size: 14px;
+}
+
+.date-cell {
+  font-variant-numeric: tabular-nums;
+  color: #4B5563;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.status-cell {
+  white-space: nowrap;
+}
+
+.row-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.row-actions button {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 14px;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.row-actions button:hover {
+  text-decoration: underline;
+}
+
+.row-actions .delete-btn {
+  color: var(--status-rejected);
+}
+
+.empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  color: #6B7280;
+  border-bottom: 1px solid var(--color-border);
+}
